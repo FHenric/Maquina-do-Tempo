@@ -1,5 +1,13 @@
-const nome: string = 'Filipe';
+import fastify from "fastify";
 
-const numero: number = 2;
+const app = fastify();
 
-console.log(nome, numero);
+app.get('/jujuba', () => {
+  return 'Oi meu amorzinho <3'
+});
+
+app.listen({
+  port:3333,
+}).then(() => {
+  console.log("Dale bença, tá rodando já visse: http://localhost:3333")
+});
